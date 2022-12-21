@@ -1,9 +1,14 @@
+import { Fragment } from "react";
+
+import { AppContent, AppFooter, AppHeader } from "./components";
 
 const App = () => {
   return (
-    <div>
-      <h1>MySQL Creation Tool</h1>
-    </div>
+    <Fragment>
+      <AppHeader title='Simple MySQL Query Creation Tool' />
+      <AppContent />
+      <AppFooter />
+    </Fragment>
   );
 }
 
