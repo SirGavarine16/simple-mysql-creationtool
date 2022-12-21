@@ -210,6 +210,21 @@ const TableFieldModal: FC<Props> = ({ open, onClose, mode }) => {
                     </Row>
                     <Row gutter={16}>
                         {
+                            key === 'regular'
+                                ?
+                                <Col span={12}>
+                                    <Form.Item
+                                        label='Unique'
+                                        name='unique'
+                                        valuePropName="checked"
+                                        initialValue={false}
+                                    >
+                                        <Switch />
+                                    </Form.Item>
+                                </Col>
+                                : null
+                        }
+                        {
                             type === 'VARCHAR'
                                 ? <Col span={12}>
                                     <Form.Item
@@ -240,22 +255,6 @@ const TableFieldModal: FC<Props> = ({ open, onClose, mode }) => {
                                 : null
                         }
                     </Row>
-                    {
-                        key === 'regular'
-                            ? <Row gutter={16}>
-                                <Col span={12}>
-                                    <Form.Item
-                                        label='Unique'
-                                        name='unique'
-                                        valuePropName="checked"
-                                        initialValue={false}
-                                    >
-                                        <Switch />
-                                    </Form.Item>
-                                </Col>
-                            </Row>
-                            : null
-                    }
                 </Form>
             </Modal>
         </Fragment>
