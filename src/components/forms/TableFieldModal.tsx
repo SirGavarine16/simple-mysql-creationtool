@@ -184,7 +184,7 @@ const TableFieldModal: FC<Props> = ({ open, onClose, mode }) => {
                                             <Select.Option value='FLOAT'>FLOAT</Select.Option>
                                             <Select.Option value='VARCHAR'>VARCHAR</Select.Option>
                                             <Select.Option value='VARCHAR(255)'>VARCHAR(255)</Select.Option>
-                                            <Select.Option value='VARCHAR(500)'>VARCHAR(255)</Select.Option>
+                                            <Select.Option value='VARCHAR(500)'>VARCHAR(500)</Select.Option>
                                             <Select.Option value='DATETIME'>DATETIME</Select.Option>
                                             <Select.Option value='ENUM'>ENUM</Select.Option>
                                         </Select>
