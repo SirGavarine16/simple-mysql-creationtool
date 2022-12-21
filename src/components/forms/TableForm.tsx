@@ -71,9 +71,10 @@ const TableForm: FC<Props> = () => {
             }
 
             const tbFieldNull = tbField.allowsNull ? '' : ' NOT NULL';
+            const tbFieldUnique = tbField.unique ? ' UNIQUE' : '';
 
             if (tbField.key === 'fk') {
-                fieldsSentence += `${tbField.name} INT ${tbFieldNull}`;
+                fieldsSentence += `${tbField.name} INT ${tbFieldNull}${tbFieldUnique}`;
             }
 
             if (tbField.key === 'regular') {
@@ -84,7 +85,7 @@ const TableForm: FC<Props> = () => {
                             ? `${tbField.type}(${parseEnumFields(tbField.enumFields!)})`
                             : tbField.type;
 
-                fieldsSentence += `${tbField.name} ${tbFieldType}${tbFieldNull}`;
+                fieldsSentence += `${tbField.name} ${tbFieldType}${tbFieldNull}${tbFieldUnique}`;
             }
 
             if (tbFieldIndex !== (tableFields.length - 1)) {
