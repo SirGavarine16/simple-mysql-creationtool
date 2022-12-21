@@ -15,6 +15,7 @@ export interface TableFieldFormData {
     type?: DataType; 
     varcharLength?: number;
     enumFields?: string;
+    unique?: boolean;
 }
 
 export interface TableFieldData extends TableFieldFormData {

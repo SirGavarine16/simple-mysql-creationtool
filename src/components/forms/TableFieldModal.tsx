@@ -192,6 +192,21 @@ const TableFieldModal: FC<Props> = ({ open, onClose, mode }) => {
                                 </Col>
                                 : null
                         }
+                        {
+                            key === 'fk'
+                                ?
+                                <Col span={12}>
+                                    <Form.Item
+                                        label='Unique'
+                                        name='unique'
+                                        valuePropName="checked"
+                                        initialValue={false}
+                                    >
+                                        <Switch />
+                                    </Form.Item>
+                                </Col>
+                                : null
+                        }
                     </Row>
                     <Row gutter={16}>
                         {
@@ -225,6 +240,22 @@ const TableFieldModal: FC<Props> = ({ open, onClose, mode }) => {
                                 : null
                         }
                     </Row>
+                    {
+                        key === 'regular'
+                            ? <Row gutter={16}>
+                                <Col span={12}>
+                                    <Form.Item
+                                        label='Unique'
+                                        name='unique'
+                                        valuePropName="checked"
+                                        initialValue={false}
+                                    >
+                                        <Switch />
+                                    </Form.Item>
+                                </Col>
+                            </Row>
+                            : null
+                    }
                 </Form>
             </Modal>
         </Fragment>
