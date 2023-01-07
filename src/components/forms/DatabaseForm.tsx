@@ -13,7 +13,7 @@ const DatabaseForm: FC<Props> = () => {
     const dispatch = useAppDispatch();
 
     const onSubmit = (formData: DatabaseFormData) => {
-        dispatch(setResult(`CREATE DATABASE IF NOT EXISTS ${formData.dbName}`));
+        dispatch(setResult(`CREATE DATABASE IF NOT EXISTS ${formData.dbName};`));
         form.resetFields();
     }
 
